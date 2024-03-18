@@ -1,0 +1,47 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family: "Inter", sans-serif;
+}
+h1{
+    color: white;
+    font-size: 3rem;
+}
+
+h2{
+    font-size: 2rem;
+    margin-bottom: 100px;
+}
+
+p{
+    font-size: 1.5rem;
+    line-height: 1.5em;
+}
+
+.w40{
+    width: 40%;
+}
+
+.w60{
+    width: 60%;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.w25{
+    width: 15%;
+    margin: 15px;
+}
+
+.w32{
+    width: 32%;
+}
+
+.space-between{
+justify-content: space-between;
+}
