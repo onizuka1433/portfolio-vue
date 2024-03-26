@@ -2,6 +2,7 @@
 import html5 from "@/assets/images/html5.png"
 import css3 from "@/assets/images/css3.png"
 import js from "@/assets/images/js.png"
+import vueJs from "@/assets/images/vueJs.png"
 
 </script>
 
@@ -21,6 +22,10 @@ import js from "@/assets/images/js.png"
           <div class="w25 skill">
             <img :src="js">
             <h3>Java script</h3>
+          </div>
+          <div class="w25 skill">
+            <img :src="vueJs">
+            <h3>Vue JS</h3>
           </div>
         </div>
       </div>
