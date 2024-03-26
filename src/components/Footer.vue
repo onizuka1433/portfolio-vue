@@ -5,36 +5,49 @@ import twitter from "@/assets/images/twitter.png"
 </script>
 
 <template>
-<div class="section dark">
+  <div class="section dark">
     <div class="boxed text-center">
-        <h2>Contactez-moi</h2>
-        <div class="flex space-between">
 
-            <div class="w32 contact">
-                <a href="/">
-                <img :src="email" alt="Email">
-                <h3>E-mail</h3>
-                </a>
-                </div>
-
-            <div class="w32 contact">
-                <a href="/">
-                <img :src="linkedin" alt="Linkedin">
-            <h3>Linkedin</h3>
-                </a>
-            </div>
-
-            <div class="w32 contact">
-            <a href="/">
-                <img :src="twitter" alt="Twitter">
-            <h3>Twitter</h3>
-                </a>
-            </div>
-            
+        <div class="contact_me">
+            <a href="/contact" target="_blank">
+                <h2>Contactez-moi</h2>
+            </a>
         </div>
+
+      <div class="flex space-between">
+        <div class="w32 contact">
+          <a href="mailto:test@mail.com" target="_blank"> 
+            <img :src="email" alt="Email">
+            <h3>E-mail</h3>
+          </a>
+        </div>
+        <div class="w32 contact">
+          <a href="https://www.linkedin.com/in/dina-lim-68b960124/" target="_blank"> 
+            <img :src="linkedin" alt="Linkedin">
+            <h3>Linkedin</h3>
+          </a>
+        </div>
+        <div class="w32 contact">
+          <a href="https://twitter.com/dina_lim14" target="_blank">
+            <img :src="twitter" alt="Twitter">
+            <h3>Twitter</h3>
+          </a>
+        </div>
+      </div>
     </div>
-</div>  
+  </div>
 </template>
+
+<script>
+export default {
+  // Les importations et les données nécessaires
+};
+</script>
+
+<style scoped>
+/* Les styles CSS */
+</style>
+
 
 <style scoped>
 .section{
@@ -76,7 +89,6 @@ img{
     transition: .4s ease;
     transition: transform 0.3s ease;
 }
-
 img:hover {
   filter: brightness(100%);
   transform: scale(1.1);
@@ -95,6 +107,21 @@ h3:hover {
   filter: brightness(100%);
 }
 
-
+h2{
+    text-decoration: none ;
+    color: #fff;
+}
+h2{
+    color:#fff;
+    text-decoration: underline;
+    filter: brightness(65%);
+    transition: .4s ease;
+    transition: transform 0.3s ease;
+    
+}
+h2:hover {
+  filter: brightness(100%);
+  transform: scale(1.1);
+}
 
 </style>
