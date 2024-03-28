@@ -10,19 +10,19 @@ import jeuxVideo from "@/assets/images/jeuxVideo.jpg";
       <h2>Mes réalisations</h2>
       <div class="flex wrap gap20 space-between">
         <div class="w32 realisation">
-          <a href="/">
+            <a href="/creations" target="_blank">
             <img :src="creationSushi" alt="Site de sushi">
             <h3>Site de sushi</h3>
           </a>
         </div>
         <div class="w32 realisation">
-          <a href="/">
+            <a href="/creations" target="_blank">
             <img :src="anime" alt="Site de culture animé">
             <h3>Site de culture animé</h3>
           </a>
         </div>
         <div class="w32 realisation">
-          <a href="/">
+            <a href="/creations" target="_blank">
             <img :src="jeuxVideo" alt="Site de jeux vidéo">
             <h3>Site de jeux vidéo</h3>
           </a>

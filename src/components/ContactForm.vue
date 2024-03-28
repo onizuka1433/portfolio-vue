@@ -1,25 +1,31 @@
 <template>
-    <form @submit.prevent="submitForm">
-      <label for="firstName">Prénom:</label>
-      <input type="text" id="firstName" v-model="firstName" required><br>
-  
-      <label for="lastName">Nom:</label>
-      <input type="text" id="lastName" v-model="lastName" required><br>
-  
-      <label for="subject">Objet:</label>
-      <input type="text" id="subject" v-model="subject" required><br>
-  
-      <label for="message">Message:</label><br>
-      <textarea id="message" v-model="message" rows="4" cols="50" required></textarea><br>
-  
-      <button type="submit">Envoyer</button>
-    </form>
-  </template>
+  <form @submit.prevent="submitForm" action="mailto:votreadresseemail@example.com" method="POST">
+
+    <label for="email">Votre e-mail:</label>
+    <input type="email" id="email" v-model="email" required><br>
+
+    <label for="firstName">Prénom:</label>
+    <input type="text" id="firstName" v-model="firstName" required><br>
+
+    <label for="lastName">Nom:</label>
+    <input type="text" id="lastName" v-model="lastName" required><br>
+
+    <label for="subject">Objet:</label>
+    <input type="text" id="subject" v-model="subject" required><br>
+
+    <label for="message">Message:</label><br>
+    <textarea id="message" v-model="message" rows="4" cols="50" required></textarea><br>
+
+    <button type="submit">Envoyer</button>
+  </form>
+</template>
+
   
   <script>
   export default {
     data() {
       return {
+        email: '',
         firstName: '',
         lastName: '',
         subject: '',
@@ -40,7 +46,7 @@
 form {
   max-width: 400px;
   margin: 5px auto;
-  border: 5px solid #007bff;
+  border: 5px solid #000000;
   padding: 20px;
   border-radius: 5px;
 }
@@ -65,7 +71,7 @@ textarea {
 }
 
 button[type="submit"] {
-  background-color: #007bff;
+  background-color: #000000;
   color: #fff;
   padding: 10px 20px;
   border: none;
