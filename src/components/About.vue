@@ -37,4 +37,7 @@
     justify-content:space-around;
     
 }
+p{
+    color: black;
+}
 </style>
