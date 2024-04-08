@@ -7,6 +7,7 @@ import vueJs from "@/assets/images/vueJs.png"
 </script>
 
 <template>
+  <section id="section2">
     <div class="section dark">
       <div class="boxed text-center">
         <h2>Mes compétences</h2>
@@ -14,22 +15,27 @@ import vueJs from "@/assets/images/vueJs.png"
           <div class="w25 skill">
             <img :src="html5">
             <h3>HTML</h3>
-          </div>
-          <div class="w25 skill">
+            </div>
+
+            <div class="w25 skill">
             <img :src="css3">
             <h3>CSS 3</h3>
-          </div>
-          <div class="w25 skill">
+            </div>
+
+            <div class="w25 skill">
             <img :src="js">
             <h3>Java script</h3>
-          </div>
-          <div class="w25 skill">
-            <img :src="vueJs">
-            <h3>Vue JS</h3>
+            </div>
+
+            <div class="w25 skill">
+              <img :src="vueJs">
+              <h3>Vue JS</h3>
+            </div>
+            
           </div>
         </div>
       </div>
-    </div>
+    </section>
   </template>
 
 

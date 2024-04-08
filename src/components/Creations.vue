@@ -5,31 +5,37 @@ import jeuxVideo from "@/assets/images/jeuxVideo.jpg";
 </script>
 
 <template>
-  <div class="section">
-    <div class="boxed text-center">
-      <h2>Mes réalisations</h2>
-      <div class="flex wrap gap20 space-between">
-        <div class="w32 realisation">
-            <a href="/creations" target="_blank">
-            <img :src="creationSushi" alt="Site de sushi">
-            <h3>Site de sushi</h3>
-          </a>
-        </div>
-        <div class="w32 realisation">
-            <a href="/creations" target="_blank">
-            <img :src="anime" alt="Site de culture animé">
-            <h3>Site de culture animé</h3>
-          </a>
-        </div>
-        <div class="w32 realisation">
-            <a href="/creations" target="_blank">
-            <img :src="jeuxVideo" alt="Site de jeux vidéo">
-            <h3>Site de jeux vidéo</h3>
-          </a>
+  <section id="section3">
+    <div class="section">
+      <div class="boxed text-center">
+        <h2>Mes réalisations</h2>
+
+        <div class="flex wrap gap20 space-between">
+          <div class="w32 realisation">
+              <a href="/creations" target="_blank">
+              <img :src="creationSushi" alt="Site de sushi">
+              <h3>Site de sushi</h3>
+            </a>
+          </div>
+
+          <div class="w32 realisation">
+              <a href="/creations" target="_blank">
+              <img :src="anime" alt="Site de culture animé">
+              <h3>Site de culture animé</h3>
+            </a>
+          </div>
+
+          <div class="w32 realisation">
+              <a href="/creations" target="_blank">
+              <img :src="jeuxVideo" alt="Site de jeux vidéo">
+              <h3>Site de jeux vidéo</h3>
+            </a>
+
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <style scoped>
@@ -97,7 +103,7 @@ justify-content: space-between;
 
 .realisation:hover img{
     filter:brightness(90%);
-    box-shadow: 15px 15px 15px rgba(0, 0, 0, 1);
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, );
  
     
 }

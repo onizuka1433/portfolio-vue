@@ -1,13 +1,13 @@
 <template>
     <div>
-      <nav class="navbar">
-        <ul>
-          <li><a href="#about"><h4>À PROPOS</h4></a></li>
-          <li><a href="#skills"><h4>COMPETENCES</h4></a></li>
-          <li><a href="#creations"><h4>REALISATIONS</h4></a></li>
-          <li><a href="#contact"><h4>CONTACT</h4></a></li>
-        </ul>
-      </nav>
+        <nav class="navbar">
+      <ul>
+        <li><a href="#about" @click="scrollToSection('section1')"><h4>À PROPOS</h4></a></li>
+        <li><a href="#skills" @click="scrollToSection('section2')"><h4>COMPETENCES</h4></a></li>
+        <li><a href="#creations" @click="scrollToSection('section3')"><h4>REALISATIONS</h4></a></li>
+        <li><a href="#contact" @click="scrollToSection('section4')"><h4>CONTACT</h4></a></li>
+      </ul>
+    </nav>
     
       <div class="slider">
         <img :src="background" class="slider-background" />
@@ -20,7 +20,14 @@
   </template>
   
   <script setup>
-  import background from "@/assets/images/background.jpg"
+  import background from "@/assets/images/background.jpg";
+
+  function scrollToSection(sectionId) {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+}
   </script>
   
   <style scoped>
@@ -33,7 +40,7 @@
   .navbar {
     background-color: rgba(0, 0, 0, 0.5);
     max-width: 100%; 
-    height: 50px;
+    height: px;
     position: fixed;
     width: 100%;
     z-index: 999; 

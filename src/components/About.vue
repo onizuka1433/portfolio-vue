@@ -3,18 +3,20 @@
 </script>
 
 <template>
-    <div class="section">
-        <div class="boxed">
-            <div class="flex">
-                <div class="w40">
-                    <h2>A propos de moi</h2>
-                </div>
-                <div class="w60">
-                    <P>XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXX</P>
+    <section id="section1">
+        <div class="section">
+            <div class="boxed">
+                <div class="flex">
+                    <div class="w40">
+                        <h2>A propos de moi</h2>
+                    </div>
+                    <div class="w60">
+                        <P>XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXX</P>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>
