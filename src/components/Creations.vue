@@ -1,7 +1,7 @@
 <script setup>
-import anime from "@/assets/images/anime.jpg";
-import creationSushi from "@/assets/images/creationSushi.jpg";
-import jeuxVideo from "@/assets/images/jeuxVideo.jpg";
+//import anime from "@/assets/images/anime.jpg";
+//import creationSushi from "@/assets/images/creationSushi.jpg";
+//import jeuxVideo from "@/assets/images/jeuxVideo.jpg";
 </script>
 
 <template>
@@ -9,27 +9,38 @@ import jeuxVideo from "@/assets/images/jeuxVideo.jpg";
     <div class="section">
       <div class="boxed text-center">
         <h2>Mes réalisations</h2>
+        <Modal :isVisible="showModal" @update:isVisible="showModal = $event">
+      <template #header>
+        <h3>{{ currentTitle }}</h3>
+      </template>
+      {{currentMessage}}
+      <a href="{{ currentLink }}" target="_blank">{{ currentLinkTitle }} </a>
+      {{ currentTechnology }}
+      <template #footer>
+        <button @click="showModal = false">Fermer</button>
+      </template>
+    </Modal>
 
         <div class="flex wrap gap20 space-between">
-          <div class="w32 realisation">
-              <a href="/creations" target="_blank">
+          <div class="w32 realisation" @click="getModalData('sushi')">
+
               <img :src="creationSushi" alt="Site de sushi">
               <h3>Site de sushi</h3>
-            </a>
+
           </div>
 
-          <div class="w32 realisation">
-              <a href="/creations" target="_blank">
+          <div class="w32 realisation" @click="getModalData('anime')">
+
               <img :src="anime" alt="Site de culture animé">
               <h3>Site de culture animé</h3>
-            </a>
+
           </div>
 
-          <div class="w32 realisation">
-              <a href="/creations" target="_blank">
+          <div class="w32 realisation" @click="getModalData('jeuxVideo')">
+
               <img :src="jeuxVideo" alt="Site de jeux vidéo">
               <h3>Site de jeux vidéo</h3>
-            </a>
+
 
           </div>
         </div>
@@ -37,6 +48,61 @@ import jeuxVideo from "@/assets/images/jeuxVideo.jpg";
     </div>
   </section>
 </template>
+
+<script>
+import anime from "@/assets/images/anime.jpg";
+import creationSushi from "@/assets/images/creationSushi.jpg";
+import jeuxVideo from "@/assets/images/jeuxVideo.jpg";
+
+import Modal from "@/components/Modal.vue";
+export default {
+  components: {
+    Modal
+  },
+
+methods: {
+  getModalData(name) {
+    console.log(name);
+    this.showModal = true;
+    if (name === "anime") {
+      this.currentTitle = "anime";
+      this.currentMessage = "manga";
+      this.currentLink = "link"
+      this.currentTechnology = "html"
+      this.currentLinkTitle = "linkTitle"
+    }
+    if (name === "sushi") {
+      this.currentTitle = "sushi";
+      this.currentMessage = "cuisine";
+      this.currentLink = "link"
+      this.currentTechnology = "css"
+      this.currentLinkTitle = "linkTitle"
+    }
+    if (name === "jeuxVideo") {
+      this.currentTitle = "jeux video";
+      this.currentMessage = "gaming";
+      this.currentLink = "link"
+      this.currentTechnology = "vuejs"
+      this.currentLinkTitle = "linkTitle"
+    }
+  }
+},
+
+  data() {
+    return {
+      currentLinkTitle : "",
+      currentLink:"",
+      currentTechnology:"",
+      currentTitle: "",
+      currentMessage: "",
+      showModal: false,
+      anime: anime,
+      creationSushi: creationSushi,
+      jeuxVideo: jeuxVideo
+    }
+  }
+}
+</script>
 
 <style scoped>
 .section{
