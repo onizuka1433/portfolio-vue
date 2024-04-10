@@ -2,20 +2,20 @@
     <div v-if="isVisible" class="modal-backdrop" @click.self="close">
       <div class="modal-content">
         <slot name="header">
-          <!-- Contenu d'en-tête par défaut -->
+
           En-tête de la modale
         </slot>
         <slot>
-          <!-- Contenu principal par défaut -->
+
           Corps de la modale
         </slot>
         <slot name="footer">
-          <!-- Contenu du pied de page par défaut -->
-          <button @click="close">Fermer</button>
+
+          <button @click="close" class="close-button">Fermer</button>
         </slot>
       </div>
     </div>
-  </template>
+</template>
   
   <script>
   export default {
@@ -32,7 +32,8 @@
   }
   </script>
   
-  <style>
+  <style scoped>
+  
   .modal-backdrop {
     position: fixed;
     top: 0;
@@ -47,9 +48,27 @@
   }
   
   .modal-content {
-    background: white;
+    background: #fff;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: auto;
+    border: 10px solid black;
+    padding: 20px;
+    
+  }
+  
+  .close-button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Couleur du bouton */
+    color: #fff; /* Couleur du texte */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+  }
+  
+  .close-button:hover {
+    background-color: #0056b3; /* Couleur du bouton au survol */
   }
   </style>
+  
