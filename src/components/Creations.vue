@@ -1,7 +1,5 @@
 <script setup>
-//import anime from "@/assets/images/anime.jpg";
-//import creationSushi from "@/assets/images/creationSushi.jpg";
-//import jeuxVideo from "@/assets/images/jeuxVideo.jpg";
+
 </script>
 
 <template>
@@ -9,39 +7,43 @@
     <div class="section">
       <div class="boxed text-center">
         <h2>Mes réalisations</h2>
-        <Modal :isVisible="showModal" @update:isVisible="showModal = $event">
-      <template #header>
-        <h3>{{ currentTitle }}</h3>
-      </template>
-      {{currentMessage}}
-      <a href="{{ currentLink }}" target="_blank">{{ currentLinkTitle }} </a>
-      {{ currentTechnology }}
-      <template #footer>
-        <button @click="showModal = false">Fermer</button>
-      </template>
-    </Modal>
+        <Modal :isVisible="showModal" @update:isVisible="showModal = $event" :style="{ top: modalTop, left: modalLeft }">
+          <template #header>
+            <h3>{{ currentTitle }}</h3>
+          </template>
+          <div class="modal-content">
+            <br>
+            <img :src="modalImageSrc" alt="Image modale" class="modal-image">
+            <br>
+            <br>
+            {{ currentMessage }}
+            <br>
+            <br>
+            <a v-if="currentLink" :href="currentLink" target="_blank">{{ currentLinkTitle }}</a>
+            <div>
+              <br>{{ currentTechnology }}<br>
+            </div>
+          </div>
+          <template #footer>
+            <br>
+            <button @click="showModal = false">Fermer</button>
+          </template>
+        </Modal>
 
         <div class="flex wrap gap20 space-between">
-          <div class="w32 realisation" @click="getModalData('sushi')">
-
-              <img :src="creationSushi" alt="Site de sushi">
-              <h3>Site de sushi</h3>
-
+          <div class="w32 realisation" @click="getModalData('sushi', creationSushi)">
+            <img :src="creationSushi" alt="Site de sushi">
+            <h3>Site de sushi</h3>
           </div>
 
-          <div class="w32 realisation" @click="getModalData('anime')">
-
-              <img :src="anime" alt="Site de culture animé">
-              <h3>Site de culture animé</h3>
-
+          <div class="w32 realisation" @click="getModalData('anime', anime)">
+            <img :src="anime" alt="Site de culture animé">
+            <h3>Site de culture animé</h3>
           </div>
 
-          <div class="w32 realisation" @click="getModalData('jeuxVideo')">
-
-              <img :src="jeuxVideo" alt="Site de jeux vidéo">
-              <h3>Site de jeux vidéo</h3>
-
-
+          <div class="w32 realisation" @click="getModalData('jeuxVideo', jeuxVideo)">
+            <img :src="jeuxVideo" alt="Site de jeux vidéo">
+            <h3>Site de jeux vidéo</h3>
           </div>
         </div>
       </div>
@@ -55,35 +57,37 @@ import creationSushi from "@/assets/images/creationSushi.jpg";
 import jeuxVideo from "@/assets/images/jeuxVideo.jpg";
 
 import Modal from "@/components/Modal.vue";
+
 export default {
   components: {
     Modal
   },
 
 methods: {
-  getModalData(name) {
-    console.log(name);
+  getModalData(name, modalImageSrc) {
     this.showModal = true;
+    this.modalImageSrc = modalImageSrc;
+    
     if (name === "anime") {
-      this.currentTitle = "anime";
-      this.currentMessage = "manga";
+      this.currentTitle = "ANIME MANIA"
+      this.currentMessage = "Site vitrine responsive pour un magasin de culture japonaise."
       this.currentLink = "link"
-      this.currentTechnology = "html"
-      this.currentLinkTitle = "linkTitle"
+      this.currentTechnology = "Développé avec :HTML5/CSS3, JavaScript, Vue.js 3."
+      this.currentLinkTitle = "ANIME MANIA"
     }
     if (name === "sushi") {
-      this.currentTitle = "sushi";
-      this.currentMessage = "cuisine";
+      this.currentTitle = "SUSHI FACTORY";
+      this.currentMessage = "Site vitrine responsive pour un restaurant japonais."
       this.currentLink = "link"
-      this.currentTechnology = "css"
-      this.currentLinkTitle = "linkTitle"
+      this.currentTechnology = "Développé avec :HTML5/CSS3, JavaScript, Vue.js 3."
+      this.currentLinkTitle = "SUSHI FACTORY"
     }
     if (name === "jeuxVideo") {
-      this.currentTitle = "jeux video";
-      this.currentMessage = "gaming";
+      this.currentTitle = "GAMING ZONE"
+      this.currentMessage = "Site vitrine responsive pour un magasin de jeux viéo."
       this.currentLink = "link"
-      this.currentTechnology = "vuejs"
-      this.currentLinkTitle = "linkTitle"
+      this.currentTechnology = "Développé avec :HTML5/CSS3, JavaScript, Vue.js 3."
+      this.currentLinkTitle = "GAMING ZONE"
     }
   }
 },
@@ -98,13 +102,15 @@ methods: {
       showModal: false,
       anime: anime,
       creationSushi: creationSushi,
-      jeuxVideo: jeuxVideo
+      jeuxVideo: jeuxVideo,
+      modalImageSrc: ""
     }
   }
 }
 </script>
 
 <style scoped>
+
 .section{
     padding: 100px 0;
 }
@@ -149,6 +155,7 @@ justify-content: space-between;
     width:max-content;
     opacity: 0;
     transition: .4s ease;
+    color: white;
 }
 
 .realisation a{
@@ -179,4 +186,9 @@ justify-content: space-between;
 
 
 }
+img{
+  width: 300px;
+  height: 300px;
+}
+
 </style>
