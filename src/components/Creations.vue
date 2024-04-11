@@ -23,6 +23,12 @@
             <div>
               <br>{{ currentTechnology }}<br>
             </div>
+            <div>
+              <br>{{ currentDate }} <br>
+            </div>
+            <div>
+              {{ currentCategory }} <br>
+            </div>
           </div>
           <template #footer>
             <br>
@@ -74,6 +80,8 @@ methods: {
       this.currentLink = "link"
       this.currentTechnology = "Développé avec :HTML5/CSS3, JavaScript, Vue.js 3."
       this.currentLinkTitle = "ANIME MANIA"
+      this.currentDate = "Date : Avril 2024"
+      this.currentCategory = "Categorie: site virtine"
     }
     if (name === "sushi") {
       this.currentTitle = "SUSHI FACTORY";
@@ -81,6 +89,8 @@ methods: {
       this.currentLink = "link"
       this.currentTechnology = "Développé avec :HTML5/CSS3, JavaScript, Vue.js 3."
       this.currentLinkTitle = "SUSHI FACTORY"
+      this.currentDate = "Date : Avril 2024"
+      this.currentCategory = "Categorie: site virtine"
     }
     if (name === "jeuxVideo") {
       this.currentTitle = "GAMING ZONE"
@@ -88,6 +98,8 @@ methods: {
       this.currentLink = "link"
       this.currentTechnology = "Développé avec :HTML5/CSS3, JavaScript, Vue.js 3."
       this.currentLinkTitle = "GAMING ZONE"
+      this.currentDate = "Date : Avril 2024"
+      this.currentCategory = "Categorie: site virtine"
     }
   }
 },
@@ -103,7 +115,9 @@ methods: {
       anime: anime,
       creationSushi: creationSushi,
       jeuxVideo: jeuxVideo,
-      modalImageSrc: ""
+      modalImageSrc: "",
+      currentDate:"",
+      currentCategory:"",
     }
   }
 }
