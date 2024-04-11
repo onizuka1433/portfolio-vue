@@ -34,7 +34,7 @@
   body, html {
     margin: 0;
     padding: 0;
-    height: 100%; /* Ajustement de la hauteur à 100% pour remplir l'écran */
+    height: 100%; 
   }
   
   .navbar {
@@ -52,8 +52,8 @@
     padding: 0;
     display: flex; 
     justify-content: space-around;
-    align-items: center; /* Centrage vertical des éléments */
-    height: 100%; /* Hauteur des éléments de la barre de navigation */
+    align-items: center; 
+    height: 100%; 
   }
   
   .navbar ul li {
