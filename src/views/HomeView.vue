@@ -6,6 +6,7 @@ import Creations from '@/components/Creations.vue';
 import Footer from '@/components/Footer.vue';
 
 
+
 </script>
 
 <template>
@@ -14,6 +15,7 @@ import Footer from '@/components/Footer.vue';
     <Skills />
     <Creations />
     <Footer />
+
   </main>
 </template>
 

@@ -1,27 +1,36 @@
+<script setup>
+  import Footer from '@/components/Footer.vue';
+</script>
+
 <template>
-  <form @submit.prevent="submitForm" action="mailto:votreadresseemail@example.com" method="POST">
+    <div class="form-container">
+      <form @submit.prevent="submitForm" action="mailto:votreadresseemail@example.com" method="POST">
 
-    <label for="email">Votre e-mail:</label>
-    <input type="email" id="email" v-model="email" required><br>
+          <label for="email">Votre e-mail:</label>
+          <input type="email" id="email" v-model="email" placeholder="exemple@domaine.com" required><br>
 
-    <label for="firstName">Prénom:</label>
-    <input type="text" id="firstName" v-model="firstName" required><br>
+          <label for="firstName">Prénom:</label>
+          <input type="text" id="firstName" v-model="firstName" placeholder="Martin" required><br>
 
-    <label for="lastName">Nom:</label>
-    <input type="text" id="lastName" v-model="lastName" required><br>
+          <label for="lastName">Nom:</label>
+          <input type="text" id="lastName" v-model="lastName" placeholder="DUPOND" required><br>
 
-    <label for="subject">Objet:</label>
-    <input type="text" id="subject" v-model="subject" required><br>
+          <label for="subject">Objet:</label>
+          <input type="text" id="subject" v-model="subject" placeholder="Titre du message" required><br>
 
-    <label for="message">Message:</label><br>
-    <textarea id="message" v-model="message" rows="4" cols="50" required></textarea><br>
+          <label for="message">Message:</label><br>
+          <textarea id="message" v-model="message" rows="4" cols="50"placeholder="Votre message" required></textarea><br>
 
-    <button type="submit">Envoyer</button>
-  </form>
+          <button type="submit">Envoyer</button>
+      </form>
+    </div>
+    <Footer />
 </template>
 
   
   <script>
+
+
   export default {
     data() {
       return {
@@ -32,18 +41,26 @@
         message: ''
       };
     },
+
     methods: {
       submitForm() {
-        // Ajoutez ici la logique pour envoyer le formulaire
+        window.close();
       }
-    }
+    },
   };
   </script>
   
   <style scoped>
-
+.form-container {
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
 
 form {
+  background-color: #fff;
   max-width: 400px;
   margin: 5px auto;
   border: 5px solid #000000;
@@ -54,7 +71,6 @@ form {
 label {
   display: block;
   margin-bottom: 5px;
-  margin: 10px;
 }
 
 input[type="text"],

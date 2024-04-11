@@ -45,12 +45,12 @@ import twitter from "@/assets/images/twitter.png"
 
 <script>
 export default {
-  // Les importations et les données nécessaires
+
 };
 </script>
 
 <style scoped>
-/* Les styles CSS */
+
 </style>
 
 
