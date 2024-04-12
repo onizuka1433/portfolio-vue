@@ -1,5 +1,6 @@
 <script setup>
   import Footer from '@/components/Footer.vue';
+
 </script>
 
 <template>
@@ -23,8 +24,14 @@
 
           <button type="submit">Envoyer</button>
       </form>
+
+      <div class="back-button">
+        <a href="/" target="blank">Retour à l'accueil</a>
+      </div>
+
     </div>
     <Footer />
+
 </template>
 
   
@@ -52,7 +59,7 @@
   
   <style scoped>
 .form-container {
-  position:absolute;
+  position:fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -95,7 +102,11 @@ button[type="submit"] {
   cursor: pointer;
 }
 
-button[type="submit"]:hover {
+button:hover {
+  background-color: #0056b3;
+}
+
+.back-button :hover{
   background-color: #0056b3;
 }
 
@@ -104,6 +115,17 @@ button[type="submit"]:hover {
   font-size: 0.9em;
   margin-top: 5px;
 }
-
+.back-button a{
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #000000;
+  margin: 50px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
   </style>
   

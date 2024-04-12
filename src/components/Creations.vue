@@ -27,7 +27,7 @@
               <br>{{ currentDate }} <br>
             </div>
             <div>
-              {{ currentCategory }} <br>
+                  {{ currentCategory }} <br>
             </div>
           </div>
           <template #footer>
