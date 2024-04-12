@@ -19,7 +19,7 @@
             {{ currentMessage }}
             <br>
             <br>
-            <a v-if="currentLink" :href="currentLink" target="_blank">{{ currentLinkTitle }}</a>
+            <a v-if="currentLink" :href="'/:pathMatch(.*)*'" target="_blank">{{ currentLinkTitle }}</a>
             <div>
               <br>{{ currentTechnology }}<br>
             </div>
@@ -61,6 +61,7 @@
 import anime from "@/assets/images/anime.jpg";
 import creationSushi from "@/assets/images/creationSushi.jpg";
 import jeuxVideo from "@/assets/images/jeuxVideo.jpg";
+import notFound from "@/assets/images/notFound.jpg"
 
 import Modal from "@/components/Modal.vue";
 
@@ -82,6 +83,7 @@ methods: {
       this.currentLinkTitle = "ANIME MANIA"
       this.currentDate = "Date : Avril 2024"
       this.currentCategory = "Categorie: site virtine"
+      this.current404 = "Erreur 404"
     }
     if (name === "sushi") {
       this.currentTitle = "SUSHI FACTORY";
@@ -91,6 +93,7 @@ methods: {
       this.currentLinkTitle = "SUSHI FACTORY"
       this.currentDate = "Date : Avril 2024"
       this.currentCategory = "Categorie: site virtine"
+      this.current404 = "Erreur 404"
     }
     if (name === "jeuxVideo") {
       this.currentTitle = "GAMING ZONE"
@@ -100,6 +103,7 @@ methods: {
       this.currentLinkTitle = "GAMING ZONE"
       this.currentDate = "Date : Avril 2024"
       this.currentCategory = "Categorie: site virtine"
+      this.current404 = "Erreur 404"
     }
   }
 },
@@ -118,6 +122,8 @@ methods: {
       modalImageSrc: "",
       currentDate:"",
       currentCategory:"",
+      current404:"",
+      notFound: notFound,
     }
   }
 }
