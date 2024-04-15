@@ -173,9 +173,11 @@ justify-content: space-between;
     transform: translate(-50%,-50%);
     font-size: 2rem;
     width:max-content;
-    opacity: 0;
+    opacity: 1;
     transition: .4s ease;
     color: white;
+    
+
 }
 
 .realisation a{
@@ -197,12 +199,15 @@ justify-content: space-between;
 .realisation:hover img{
     filter:brightness(90%);
     box-shadow: 15px 15px 15px rgba(0, 0, 0);
+
  
     
 }
 
 .realisation:hover h3{
     opacity: 1;
+    text-decoration: underline;
+
 
 
 }
