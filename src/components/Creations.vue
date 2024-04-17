@@ -19,7 +19,8 @@
             {{ currentMessage }}
             <br>
             <br>
-            <a v-if="currentLink" :href="'/:pathMatch(.*)*'" target="_blank">{{ currentLinkTitle }}</a>
+            <a v-if="currentLink" :href="currentLink" target="_blank">{{ currentLinkTitle }}</a>
+                        <MoshiSushi v-if="currentLink === 'MoshiSushi'" />
             <div>
               <br>{{ currentTechnology }}<br>
             </div>
@@ -64,10 +65,11 @@ import jeuxVideo from "@/assets/images/jeuxVideo.jpg";
 import notFound from "@/assets/images/notFound.jpg"
 
 import Modal from "@/components/Modal.vue";
+import MoshiSushi from "@/components/MoshiSushi.vue"
 
 export default {
   components: {
-    Modal
+    Modal,
   },
 
 methods: {
@@ -83,17 +85,19 @@ methods: {
       this.currentLinkTitle = "ANIME MANIA"
       this.currentDate = "Date : Avril 2024"
       this.currentCategory = "Categorie: site virtine"
-      this.current404 = "Erreur 404"
+     
+      
     }
     if (name === "sushi") {
       this.currentTitle = "SUSHI FACTORY";
       this.currentMessage = "Site vitrine responsive pour un restaurant japonais."
-      this.currentLink = "link"
+      this.currentLink = "MoshiSushi";
       this.currentTechnology = "Développé avec :HTML5/CSS3, JavaScript, Vue.js 3."
-      this.currentLinkTitle = "SUSHI FACTORY"
+      this.currentLinkTitle = "MOSHI SUSHI"
       this.currentDate = "Date : Avril 2024"
       this.currentCategory = "Categorie: site virtine"
       this.current404 = "Erreur 404"
+      this.moshiSushi = MoshiSushi
     }
     if (name === "jeuxVideo") {
       this.currentTitle = "GAMING ZONE"
@@ -103,7 +107,7 @@ methods: {
       this.currentLinkTitle = "GAMING ZONE"
       this.currentDate = "Date : Avril 2024"
       this.currentCategory = "Categorie: site virtine"
-      this.current404 = "Erreur 404"
+
     }
   }
 },
@@ -124,6 +128,8 @@ methods: {
       currentCategory:"",
       current404:"",
       notFound: notFound,
+      moshiSushi: MoshiSushi,
+      
     }
   }
 }
