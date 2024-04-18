@@ -36,9 +36,12 @@ import twitter from "@/assets/images/twitter.png"
               <h3>Twitter</h3>
             </a>
           </div>
-
         </div>
       </div>
+    </div>
+    <div class="date">
+      <p>&copy;  Avril 2024</p>
+
     </div>
   </section>
 </template>
@@ -127,6 +130,10 @@ h2{
 h2:hover {
   filter: brightness(100%);
   transform: scale(1.1);
+}
+
+.date p {
+  color :black;
 }
 
 </style>

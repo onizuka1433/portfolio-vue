@@ -49,7 +49,7 @@ function scrollToSection(sectionId) {
                 <img class="menu-sushi" src="@/assets/images/menuSushi.jpg" alt="SushiA" />
                 <img class="menu-sushiB" src="@/assets/images/menuSushiB.jpg" alt="SushiB" />
             </div>
-            <!-- Ajoutez d'autres détails ou descriptions si nécessaire -->
+
         </li>
         <li class="menu-item">
             <h2>Sashimi</h2>
@@ -57,7 +57,7 @@ function scrollToSection(sectionId) {
                 <img class="menu-sashimi" src="@/assets/images/menuSashimi.jpg" alt="SashimiA" />
                 <img class="menu-sashimiB" src="@/assets/images/menuSashimiB.jpg" alt="SashimiB" />
             </div>
-            <!-- Ajoutez d'autres détails ou descriptions si nécessaire -->
+
         </li>
         <li class="menu-item">
             <h2>Maki</h2>
@@ -65,7 +65,7 @@ function scrollToSection(sectionId) {
                 <img class="menu-maki" src="@/assets/images/menuMaki.jpg" alt="makiA" />
                 <img class="menu-makiB" src="@/assets/images/menuMakiB.jpg" alt="MakiB" />
             </div>
-            <!-- Ajoutez d'autres détails ou descriptions si nécessaire -->
+
         </li>
     </ul>
     <a href="/notFound" target="_blank">

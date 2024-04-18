@@ -6,7 +6,7 @@
   <section id="section3">
     <div class="section">
       <div class="boxed text-center">
-        <h2>Mes réalisations</h2>
+        <h2>PORTFOLIO</h2>
         <Modal :isVisible="showModal" @update:isVisible="showModal = $event" :style="{ top: modalTop, left: modalLeft }">
           <template #header>
             <h3>{{ currentTitle }}</h3>
@@ -89,11 +89,11 @@ methods: {
       
     }
     if (name === "sushi") {
-      this.currentTitle = "SUSHI FACTORY";
+      this.currentTitle = "MOSHI MOSHI SUSHI";
       this.currentMessage = "Site vitrine responsive pour un restaurant japonais."
       this.currentLink = "MoshiSushi";
       this.currentTechnology = "Développé avec :HTML5/CSS3, JavaScript, Vue.js 3."
-      this.currentLinkTitle = "MOSHI SUSHI"
+      this.currentLinkTitle = "MOSHI MOSHI SUSHI"
       this.currentDate = "Date : Avril 2024"
       this.currentCategory = "Categorie: site virtine"
       this.current404 = "Erreur 404"
