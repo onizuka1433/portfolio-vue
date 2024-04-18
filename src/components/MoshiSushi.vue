@@ -68,6 +68,10 @@ function scrollToSection(sectionId) {
             <!-- Ajoutez d'autres détails ou descriptions si nécessaire -->
         </li>
     </ul>
+    <a href="/notFound" target="_blank">
+    <button type="reserver"><h3>Reserver une table</h3></button>
+    </a>
+    
 </div>
       <div class="about" id="section3">
         <h2>À propos de nous</h2>
@@ -84,7 +88,7 @@ function scrollToSection(sectionId) {
     </body>
   
     <footer>
-      <p>&copy; 2024 Restaurant de Sushi</p>
+      <p>&copy; 2024 Restaurant de Sushi gastronimique</p>
     </footer>
   </template>
 
@@ -163,10 +167,13 @@ border-radius: 50%;
 width: 400px; /* Ajustez la taille de l'image selon vos besoins */
 height: 400px; /* Ajustez la taille de l'image selon vos besoins */
 margin-bottom: 100px;
+border: 5px solid black;
+
 }
 
 .menu-images {
     display: flex;
+    
     
 }
 
@@ -188,6 +195,7 @@ text-align: center;
 .menu-images {
     display: flex;
     justify-content: space-evenly;
+    
 }
 
 .menu ul {
@@ -207,5 +215,22 @@ color: black;
 
 .contact {
 margin-bottom: 100px; 
+}
+
+
+button[type="reserver"] {
+  background-color: #000000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+button :hover{
+color: red;
+transition: color 0.4s ease, transform 0.3s ease;
+transform: scale(1.1);
 }
 </style>
