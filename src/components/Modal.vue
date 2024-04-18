@@ -59,8 +59,8 @@
   
   .close-button {
     padding: 10px 20px;
-    background-color: #007bff; /* Couleur du bouton */
-    color: #fff; /* Couleur du texte */
+    background-color: #007bff; 
+    color: #fff; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -68,7 +68,7 @@
   }
   
   .close-button:hover {
-    background-color: #0056b3; /* Couleur du bouton au survol */
+    background-color: #0056b3; 
   }
   </style>
   

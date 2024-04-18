@@ -11,7 +11,9 @@
                         <h2>A propos de moi</h2>
                     </div>
                     <div class="w60">
-                        <P>XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXX</P>
+                        <P>Je me présente. 
+                            J'ai 41 ans et je suis actuellement en formation à distance au CEF en tant que développeur full-stack. Je vous présente mon portfolio en cours de développement.
+                            Je vous invite à consulter le panel non exhaustif de mes compétences ci-dessous.</P>
                     </div>
                 </div>
             </div>
